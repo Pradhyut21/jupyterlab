@@ -590,14 +590,3 @@ D:\machzero\tmp\green-full.log
 
 Those paths describe this machine. For reviewers, share the notebook and attach selected logs or recordings through a repository or PR rather than assuming that another person can access the local drive.
 
-## 13. Limitations and next work
-
-- Duplicate sessions can still exist; both measured scenarios left two sessions on this branch.
-- Kernel-ID preference chooses a matching same-path session. It does not promise exact server session-ID restoration in every case.
-- If the preferred kernel has no same-path match, selection keeps the older first-session fallback.
-- No explicit ambiguity UI or full zero/one/multiple-session state-machine implementation is added.
-- The integration scenarios simulate reload through `SessionContext`; notebook-restorer persistence and browser interactions need direct verification.
-- The notebook's saved successful outputs demonstrate its Python model, not a fresh browser run of the fix.
-- Local lint and push-hook success do not establish upstream CI success, maintainer approval, or merge status.
-
-The next work is to verify the actual development build in the browser, record the relevant reload/restart interactions, review the complete diff, and address maintainer feedback using the measured evidence above.
